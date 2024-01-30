@@ -28,7 +28,7 @@ export class LinkedListGroup implements ISortable {
   
     // Should return number of Nodes in List
     get length(): number {
-      this.data.length;
+      return this..length;
         // implement this part yourself
     }
   
