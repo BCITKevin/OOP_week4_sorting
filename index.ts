@@ -28,4 +28,4 @@ class SortUtil {
   const numberGroup = new NumberGroup([10, 3, -5, 0]);
   const sortUtil = new SortUtil(numberGroup);
   sortUtil.sort()
-  console.log(numberGroup);
+  console.log(sortUtil);
