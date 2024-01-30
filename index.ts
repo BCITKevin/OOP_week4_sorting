@@ -1,7 +1,11 @@
-class SortUtil {
-    collection: number[] | string | LinkedList;
+import { NumberGroup } from "./NumberGroup";
+import { CharacterGroup } from "./CharacterGroup";
+import { LinkedListGroup } from "./LinkedListGroup";
 
-    constructor(collection: number[] | string | LinkedList) {
+class SortUtil {
+    collection: number[] | string | LinkedListGroup;
+
+    constructor(collection: number[] | string | LinkedListGroup) {
       this.collection = collection;
     }
   
@@ -13,7 +17,7 @@ class SortUtil {
         isSorted = true;
         for (let i = 0; i < lastUnsorted; i++) {
           // HANDLE LINKED LIST LOGIC HERE 
-          if (this.collection instanceof LinkedList) {
+          if (this.collection instanceof LinkedListGroup) {
             // HELP! -Sarah
           }
   

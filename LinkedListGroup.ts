@@ -28,7 +28,13 @@ export class LinkedListGroup implements ISortable {
   
     // Should return number of Nodes in List
     get length(): number {
-      return this..length;
+      let count = 0;
+      let node: Node | null = this.head;
+      while(node) {
+        count ++;
+        node = node.next
+      }
+      return count;
         // implement this part yourself
     }
   
@@ -50,10 +56,13 @@ export class LinkedListGroup implements ISortable {
     }
   
     compare(leftPos: number, rightPos: number): boolean {
+        return this.at(leftPos).data > this.at(rightPos).data;
       // Implement this part yourself
     }
   
     swap(leftPos: number, rightPos: number): void {
+        this.at(leftPos).data = this.at(rightPos).data
+        this.at(rightPos).data = this.at(rightPos).data
         // Implement this part yourself
     }
   
