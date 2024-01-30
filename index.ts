@@ -1,6 +1,6 @@
 class SortUtil {
     collection: number[] | string | LinkedList;
-  
+
     constructor(collection: number[] | string | LinkedList) {
       this.collection = collection;
     }
