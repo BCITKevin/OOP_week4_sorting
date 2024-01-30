@@ -4,11 +4,11 @@ class Node {
     next: Node | null = null;
     data: number;
     constructor(data: number) {
-        this.data = data;
+      this.data = data;
     }
-}
-
-export class LinkedListGroup implements ISortable {
+  }
+  
+  export class LinkedListGroup implements ISortable {
     head: Node | null = null;
   
     // Create Node out of data and attach to end of list
@@ -28,14 +28,13 @@ export class LinkedListGroup implements ISortable {
   
     // Should return number of Nodes in List
     get length(): number {
-      let count = 0;
-      let node: Node | null = this.head;
-      while(node) {
-        count ++;
-        node = node.next
-      }
-      return count;
-        // implement this part yourself
+        let count = 0;
+        let node: Node | null = this.head;
+        while (node) {
+            count++;
+            node = node.next;
+        }
+        return count
     }
   
    // Convenience method that returns a Node at a given index
@@ -53,17 +52,20 @@ export class LinkedListGroup implements ISortable {
         node = node.next;
       }
       throw new Error("Error: Index out of bounds");
-    }
+    }   
   
     compare(leftPos: number, rightPos: number): boolean {
-        return this.at(leftPos).data > this.at(rightPos).data;
-      // Implement this part yourself
+        const left = this.at(leftPos);
+        const right = this.at(rightPos);
+        return left.data > right.data;
     }
   
     swap(leftPos: number, rightPos: number): void {
-        this.at(leftPos).data = this.at(rightPos).data
-        this.at(rightPos).data = this.at(rightPos).data
-        // Implement this part yourself
+        const left = this.at(leftPos);
+        const right = this.at(rightPos);
+        const temp = left.data;
+        left.data = right.data;
+        right.data = temp;
     }
   
     print(): void {

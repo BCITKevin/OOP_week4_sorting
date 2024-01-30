@@ -9,9 +9,9 @@ export class NumberGroup implements ISortable {
         return this.data.length;
     }
     swap(leftPos: number, rightPos: number): void {
-        if(true) {
-            [leftPos, rightPos] = [rightPos, leftPos];
-        }
+        
+        [this.data[leftPos], this.data[rightPos]] = [this.data[rightPos], this.data[leftPos]];
+        
     }
 
     // this.data = [1, 2, 10, 9]
